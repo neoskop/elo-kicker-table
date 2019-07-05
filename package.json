@@ -1,0 +1,20 @@
+{
+  "name": "elo-ranking",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "draco <wecke@neoskop.de>",
+  "license": "MIT",
+  "dependencies": {
+    "cli-table": "0.3.1",
+    "firebase-admin": "8.2.0",
+    "prompts": "2.1.0",
+    "uuid": "3.3.2"
+  },
+  "devDependencies": {
+    "@types/cli-table": "0.3.0",
+    "@types/prompts": "2.0.1",
+    "@types/uuid": "3.4.4",
+    "ts-node": "8.3.0",
+    "typescript": "3.5.2"
+  }
+}
