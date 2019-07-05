@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "draco <wecke@neoskop.de>",
   "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/main"
+  },
   "dependencies": {
     "cli-table": "0.3.1",
     "firebase-admin": "8.2.0",
