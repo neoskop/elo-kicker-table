@@ -1,17 +1,7 @@
-import prompts from 'prompts';
-import UUID from 'uuid';
-import fs from 'fs';
 import Table from 'cli-table';
 import firebase from 'firebase-admin';
-
-// let db : any;
-
-// if(fs.existsSync('db.json')) {
-//     db = JSON.parse(fs.readFileSync('db.json', 'utf8'));
-// }
-
-// const USERS = new Map<string, IUser>(db && db.users);
-// const MATCHES = new Map<string, IMatch>(db && db.matches);
+import prompts from 'prompts';
+import UUID from 'uuid';
 
 async function main() {
     firebase.initializeApp({
@@ -84,12 +74,7 @@ async function taskAddUser(db : firebase.database.Database) {
 
     const id = UUID.v4();
 
-    // USERS.set(id, { id, name, elo });
-    // ref.set()
-
     await set(ref.child(id), { id, name, elo });
-
-    // save();
 }
 
 async function taskListUser(db : firebase.database.Database) {
@@ -207,9 +192,6 @@ async function taskAddMatch(db : firebase.database.Database) {
     await set(usersRef.child(b1.id), b1);
 
     await set(ref.child(match.id), match);
-    // MATCHES.set(match.id, match);
-
-    // save();
 }
 
 async function taskListMatches(db : firebase.database.Database) {
